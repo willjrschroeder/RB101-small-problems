@@ -6,6 +6,12 @@ def sum_of_digits(int)
   sum
 end
 
-puts sum_of_digits(23) == 5
-puts sum_of_digits(496) == 19
-puts sum_of_digits(123_456_789) == 45
+# Refactored solution
+
+def sum_of_digits_mk2(int)
+  int.to_s.chars.map(&:to_i).sum
+end
+
+puts sum_of_digits_mk2(23) == 5
+puts sum_of_digits_mk2(496) == 19
+puts sum_of_digits_mk2(123_456_789) == 45
