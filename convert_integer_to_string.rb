@@ -32,3 +32,18 @@ end
 p integer_to_string(4321) == '4321'
 p integer_to_string(0) == '0'
 p integer_to_string(5000) == '5000'
+
+def signed_integer_to_string(integer)
+  if integer < 0
+    integer = integer * -1
+    "-" + integer_to_string(integer)
+  elsif integer > 0
+    '+' + integer_to_string(integer)
+  else
+    integer_to_string(integer)
+  end
+end
+
+p signed_integer_to_string(4321) == '+4321'
+p signed_integer_to_string(-123) == '-123'
+p signed_integer_to_string(0) == '0'
